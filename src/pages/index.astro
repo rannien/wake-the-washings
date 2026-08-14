@@ -1,0 +1,54 @@
+---
+import "../styles/global.css";
+import type { ImageMetadata } from "astro";
+import FallbackImage from "../assets/blog-placeholder-1.jpg";
+import { SITE_TITLE } from "../consts";
+import Counter from "../components/Counter.vue";
+
+const title = "Washing Machine Delay Timer Calculator";
+const description =
+    "Calculate exactly how many hours and minutes to set on your washing machine's delay timer. Enter your program duration and desired finish time — get the result instantly.";
+---
+
+<html lang="en">
+    <head>
+        <!-- Global Metadata -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href={Astro.ur} />
+
+        <!-- Primary Meta Tags -->
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta
+            name="keywords"
+            content="washing machine delay timer, laundry timer calculator, washing machine timer setting, delay start calculator"
+        />
+
+        <!-- Open Graph -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+
+        <meta property="og:description" content={description} />
+        <!--<meta property="og:image" content={new URL(image.src, Astro.url)} />-->
+    </head>
+    <body>
+        <main>
+            <Counter client:visible>
+                <h1 class="text-3xl font-bold underline">Hello, Vue!</h1>
+            </Counter>
+        </main>
+    </body>
+</html>
