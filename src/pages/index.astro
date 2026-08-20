@@ -1,9 +1,6 @@
 ---
 import "../styles/global.css";
-import type { ImageMetadata } from "astro";
-import FallbackImage from "../assets/blog-placeholder-1.jpg";
-import { SITE_TITLE } from "../consts";
-import Counter from "../components/Counter.vue";
+import WasherTimer from "../components/WasherTimer.vue";
 
 const title = "Washing Machine Delay Timer Calculator";
 const description =
@@ -46,9 +43,7 @@ const description =
     </head>
     <body>
         <main>
-            <Counter client:visible>
-                <h1 class="text-3xl font-bold underline">Hello, Vue!</h1>
-            </Counter>
+            <WasherTimer client:load />
         </main>
     </body>
 </html>
